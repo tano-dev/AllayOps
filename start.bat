@@ -62,8 +62,8 @@ if not defined MC_JAVA_XMX (
 )
 if not defined MC_JAVA_XMS set "MC_JAVA_XMS=2G"
 
-REM 4. Probe JDK capabilities (ZGC + Compact Object Headers on JDK 24/25+)
-set "JVM_FLAGS=-Xms%MC_JAVA_XMS% -Xmx%MC_JAVA_XMX% -XX:+UseZGC -XX:+ExitOnOutOfMemoryError -Dfile.encoding=UTF-8"
+REM 4. Probe JDK capabilities (ZGC + StringDeduplication + CompactObjectHeaders on JDK 24/25+)
+set "JVM_FLAGS=-Xms%MC_JAVA_XMS% -Xmx%MC_JAVA_XMX% -XX:+UseZGC -XX:+UseStringDeduplication -XX:+ExitOnOutOfMemoryError -Dfile.encoding=UTF-8"
 "%JAVA_EXE%" -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders -version >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
     set "JVM_FLAGS=%JVM_FLAGS% -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders"

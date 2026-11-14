@@ -1,4 +1,5 @@
 # Minecraft Server Properties Template (Safe to Commit)
+# Tuned for 20+ players on Fabric (No-Mods Baseline), 6C/12T CPU, 16GB RAM, NVMe SSD
 # Copy to `server.properties` and replace placeholder secrets before starting.
 accepts-transfers=false
 allow-flight=false
@@ -9,13 +10,13 @@ chat-spam-threshold-seconds=10
 command-spam-threshold-seconds=10
 difficulty=hard
 enable-code-of-conduct=false
-enable-jmx-monitoring=false
+enable-jmx-monitoring=true
 enable-query=false
 enable-rcon=false
 enable-status=true
 enforce-secure-profile=true
 enforce-whitelist=false
-entity-broadcast-range-percentage=100
+entity-broadcast-range-percentage=75
 force-gamemode=false
 function-permission-level=2
 gamemode=survival
@@ -37,8 +38,8 @@ management-server-secret=CHANGE_ME_GENERATE_RANDOM_SECRET
 management-server-tls-enabled=true
 management-server-tls-keystore=
 management-server-tls-keystore-password=
-max-chained-neighbor-updates=1000000
-max-players=20
+max-chained-neighbor-updates=100000
+max-players=30
 max-tick-time=60000
 max-world-size=29999984
 motd=AllayOps Research Minecraft Server
@@ -60,12 +61,12 @@ resource-pack-prompt=
 resource-pack-sha1=
 server-ip=
 server-port=2026
-simulation-distance=8
+simulation-distance=6
 spawn-protection=16
 status-heartbeat-interval=0
 sync-chunk-writes=false
 text-filtering-config=
 text-filtering-version=0
 use-native-transport=true
-view-distance=10
+view-distance=8
 white-list=false
