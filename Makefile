@@ -9,6 +9,8 @@ help:
 	@echo "  make format     - Check Ruff formatting"
 	@echo "  make typecheck  - Run Mypy static type checker"
 	@echo "  make repo-map   - Regenerate docs/architecture/repo_map.json"
+	@echo "  make codegraph  - Regenerate docs/architecture/codegraph.json"
+	@echo "  make sync-content - Sync mods & datapacks from external content repo"
 	@echo "  make benchmark  - Run canonical Minecraft chaos benchmark"
 
 test:
@@ -28,6 +30,12 @@ repo-map:
 
 codegraph:
 	$(PYTHON) scripts/generate_codegraph.py
+
+sync-content:
+	$(PYTHON) scripts/sync_content.py
+
+sync-content-dry:
+	$(PYTHON) scripts/sync_content.py --dry-run
 
 benchmark:
 	$(PYTHON) -m research.run_benchmark

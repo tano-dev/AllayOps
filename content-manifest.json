@@ -1,0 +1,15 @@
+{
+  "content_repo": {
+    "url": "https://github.com/tano-dev/AllayOps-Content.git",
+    "ref": "main",
+    "cache_dir": ".content-cache"
+  },
+  "mappings": {
+    "mods_dir": "mods",
+    "datapacks_dir": "world/datapacks"
+  },
+  "safety": {
+    "create_savepoint_before_sync": true,
+    "allow_jar_sync": true
+  }
+}

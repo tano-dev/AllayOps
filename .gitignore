@@ -13,6 +13,9 @@ crash-reports/
 libraries/
 versions/
 cache/
+mods/
+.content-cache/
+.content-savepoints/
 *.jar
 *.mca
 *.mcr

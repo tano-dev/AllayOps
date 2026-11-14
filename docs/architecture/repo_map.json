@@ -1,6 +1,6 @@
 {
   "project": "AllayOps",
-  "file_count": 68,
+  "file_count": 72,
   "files": [
     ".agents/rules/AGENT_WORKFLOW_AND_QUALITY.md",
     ".agents/rules/CODEGRAPH_KNOWLEDGE.md",
@@ -41,7 +41,9 @@
     "agentic_plane/parry_engine.py",
     "agentic_plane/policy_validator.py",
     "agentic_plane/tot_planner.py",
+    "content-manifest.json",
     "docs/architecture/ADR-001-repo-structure.md",
+    "docs/architecture/ADR-002-content-repo-separation.md",
     "docs/architecture/codegraph.json",
     "docs/architecture/repo_map.json",
     "docs/guides/GITHUB_ENTERPRISE_SETUP.md",
@@ -61,6 +63,7 @@
     "research/run_benchmark.py",
     "scripts/generate_codegraph.py",
     "scripts/generate_repo_map.py",
+    "scripts/sync_content.py",
     "server.properties.example",
     "shared_interfaces/__init__.py",
     "shared_interfaces/control_bus.py",
@@ -69,6 +72,7 @@
     "tests/__init__.py",
     "tests/test_adwin_and_drain.py",
     "tests/test_canary_and_chaos.py",
+    "tests/test_content_sync.py",
     "tests/test_policy_and_parry.py"
   ],
   "python_symbols": {
@@ -183,6 +187,16 @@
         "main"
       ]
     },
+    "scripts/sync_content.py": {
+      "classes": [],
+      "functions": [
+        "load_manifest",
+        "_sync_tree",
+        "sync_from_local_source",
+        "fetch_content_repo",
+        "main"
+      ]
+    },
     "shared_interfaces/__init__.py": {
       "classes": [],
       "functions": []
@@ -222,6 +236,12 @@
     "tests/test_canary_and_chaos.py": {
       "classes": [
         "TestCanaryAndChaos"
+      ],
+      "functions": []
+    },
+    "tests/test_content_sync.py": {
+      "classes": [
+        "TestContentSync"
       ],
       "functions": []
     },

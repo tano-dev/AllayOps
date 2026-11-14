@@ -47,6 +47,13 @@ git config commit.template .github/.gitmessage
 3. Ensure `eula.txt` has `eula=true` and JDK 25 is installed.
 4. Launch the server with `start.bat`.
 
+### 3. Sync External Mods & Datapacks (Optional)
+`AllayOps` focuses strictly on the **Agentic Self-Healing System**. Mods (`mods/`) and world datapacks (`world/datapacks/`) are maintained in a separate repository (`AllayOps-Content`) and pinned via [`content-manifest.json`](content-manifest.json):
+```powershell
+python scripts/sync_content.py --dry-run   # preview
+python scripts/sync_content.py             # sync with pre-update savepoint
+```
+
 ---
 
 ## Governance & Agentic Standards

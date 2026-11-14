@@ -1,16 +1,16 @@
 {
   "project": "AllayOps",
   "summary": {
-    "node_count": 24,
-    "edge_count": 39,
+    "node_count": 26,
+    "edge_count": 41,
     "planes": {
       "agentic_plane": 6,
       "minecraft_plane": 3,
       "observability_plane": 3,
       "research": 3,
-      "scripts": 2,
+      "scripts": 3,
       "shared_interfaces": 3,
-      "tests": 4
+      "tests": 5
     },
     "boundary_violations": []
   },
@@ -195,6 +195,20 @@
       "loc": 90
     },
     {
+      "id": "scripts.sync_content",
+      "path": "scripts/sync_content.py",
+      "plane": "scripts",
+      "classes": [],
+      "functions": [
+        "load_manifest",
+        "_sync_tree",
+        "sync_from_local_source",
+        "fetch_content_repo",
+        "main"
+      ],
+      "loc": 112
+    },
+    {
       "id": "shared_interfaces.__init__",
       "path": "shared_interfaces/__init__.py",
       "plane": "shared_interfaces",
@@ -259,6 +273,16 @@
       ],
       "functions": [],
       "loc": 46
+    },
+    {
+      "id": "tests.test_content_sync",
+      "path": "tests/test_content_sync.py",
+      "plane": "tests",
+      "classes": [
+        "TestContentSync"
+      ],
+      "functions": [],
+      "loc": 36
     },
     {
       "id": "tests.test_policy_and_parry",
@@ -413,6 +437,11 @@
       "type": "imports"
     },
     {
+      "source": "scripts.sync_content",
+      "target": "minecraft_plane.savepoint_manager",
+      "type": "imports"
+    },
+    {
       "source": "shared_interfaces.__init__",
       "target": "shared_interfaces.control_bus",
       "type": "imports"
@@ -450,6 +479,11 @@
     {
       "source": "tests.test_canary_and_chaos",
       "target": "research.run_benchmark",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_content_sync",
+      "target": "scripts.sync_content",
       "type": "imports"
     },
     {
