@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 🔒 Security Vulnerability Report
-    url: https://github.com/OWNER/AllayOps/security/advisories/new
+    url: https://github.com/tano-dev/AllayOps/security/advisories/new
     about: Please report security vulnerabilities privately — do NOT open public issues.
   - name: 📚 Documentation & Onboarding
-    url: https://github.com/OWNER/AllayOps/blob/main/docs/guides/ONBOARDING.md
+    url: https://github.com/tano-dev/AllayOps/blob/main/docs/guides/ONBOARDING.md
     about: Read the onboarding and architecture guides before opening a question.

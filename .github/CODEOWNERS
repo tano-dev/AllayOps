@@ -4,15 +4,15 @@
 # ==============================================================================
 
 # Default owner for everything in the repository
-*                       @tanokido85
+*                       @tano-dev
 
 # Critical Governance, CI/CD & Security
-/.github/               @tanokido85
-/SECURITY.md            @tanokido85
-/AGENTS.md              @tanokido85
-/.agents/               @tanokido85
-/.githooks/             @tanokido85
+/.github/               @tano-dev
+/SECURITY.md            @tano-dev
+/AGENTS.md              @tano-dev
+/.agents/               @tano-dev
+/.githooks/             @tano-dev
 
 # Server Config & Scripts
-/server.properties.example @tanokido85
-/scripts/               @tanokido85
+/server.properties.example @tano-dev
+/scripts/               @tano-dev

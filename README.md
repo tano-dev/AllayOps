@@ -4,6 +4,9 @@
 
 AllayOps combines a reproducible **Fabric Minecraft Server (MC 26.3 / Loader 0.20.1)** with an enterprise software engineering, CI/CD, and **AI Agentic Productivity** foundation for applying and benchmarking research techniques directly on a live server environment.
 
+### Research Lineage
+AllayOps is the domain-applied sister project of [**Safe-Agentic-DataOps for Self-Healing Real-Time E-Commerce Data Pipelines**](https://github.com/tano-dev/Safe-Agentic-DataOps-for-Self-Healing-Real-Time-E-Commerce-Data-Pipelines), adapting its core self-healing mechanisms (`ADWIN` drift detection, `Drain` log compression, `<50ms` In-Flight Active Parry, `Constitutional Safety Gate`, `Tree of Thoughts`, `Closed-Loop Canary Gate`, and `DPO` preference logging) to real-time Minecraft server operations.
+
 ---
 
 ## Architecture & Repository Layout
