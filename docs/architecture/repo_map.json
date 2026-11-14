@@ -1,9 +1,14 @@
 {
   "project": "AllayOps",
-  "file_count": 61,
+  "file_count": 68,
   "files": [
     ".agents/rules/AGENT_WORKFLOW_AND_QUALITY.md",
+    ".agents/rules/CODEGRAPH_KNOWLEDGE.md",
     ".agents/rules/PROJECT_CONTEXT.md",
+    ".agents/skills/codegraph-navigator/SKILL.md",
+    ".agents/skills/config-and-release-hygiene/SKILL.md",
+    ".agents/skills/mc-incident-triage/SKILL.md",
+    ".agents/skills/safe-research-experiment/SKILL.md",
     ".editorconfig",
     ".env.example",
     ".gitattributes",
@@ -37,6 +42,7 @@
     "agentic_plane/policy_validator.py",
     "agentic_plane/tot_planner.py",
     "docs/architecture/ADR-001-repo-structure.md",
+    "docs/architecture/codegraph.json",
     "docs/architecture/repo_map.json",
     "docs/guides/GITHUB_ENTERPRISE_SETUP.md",
     "docs/guides/ONBOARDING.md",
@@ -53,6 +59,7 @@
     "research/__init__.py",
     "research/chaos_scenarios.py",
     "research/run_benchmark.py",
+    "scripts/generate_codegraph.py",
     "scripts/generate_repo_map.py",
     "server.properties.example",
     "shared_interfaces/__init__.py",
@@ -153,6 +160,17 @@
       "classes": [],
       "functions": [
         "run_canonical_suite",
+        "main"
+      ]
+    },
+    "scripts/generate_codegraph.py": {
+      "classes": [],
+      "functions": [
+        "_module_name",
+        "_plane_of",
+        "_analyze_python_file",
+        "_detect_boundary_violations",
+        "build_codegraph",
         "main"
       ]
     },

@@ -39,11 +39,22 @@ if git diff --cached | grep -Eq '(AIza[0-9A-Za-z_-]{35}|sk-[0-9A-Za-z]{20,}|ghp_
   exit 1
 fi
 
-# 3. Auto-sync Repo Map for AI Agent productivity (if Python is available)
-if command -v python >/dev/null 2>&1 && [ -f "scripts/generate_repo_map.py" ]; then
-  python scripts/generate_repo_map.py >/dev/null 2>&1 || true
-  if [ -f "docs/architecture/repo_map.json" ]; then
-    git add docs/architecture/repo_map.json
+# 3. Auto-sync Repo Map & AST CodeGraph for AI Agent productivity
+if command -v python >/dev/null 2>&1; then
+  if [ -f "scripts/generate_repo_map.py" ]; then
+    python scripts/generate_repo_map.py >/dev/null 2>&1 || true
+    if [ -f "docs/architecture/repo_map.json" ]; then
+      git add docs/architecture/repo_map.json
+    fi
+  fi
+  if [ -f "scripts/generate_codegraph.py" ]; then
+    if ! python scripts/generate_codegraph.py >/dev/null 2>&1; then
+      echo "[PRE-COMMIT BLOCKED] Architectural boundary violation detected by generate_codegraph.py!"
+      exit 1
+    fi
+    if [ -f "docs/architecture/codegraph.json" ]; then
+      git add docs/architecture/codegraph.json
+    fi
   fi
 fi
 

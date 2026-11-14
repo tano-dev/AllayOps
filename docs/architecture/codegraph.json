@@ -1,0 +1,471 @@
+{
+  "project": "AllayOps",
+  "summary": {
+    "node_count": 24,
+    "edge_count": 39,
+    "planes": {
+      "agentic_plane": 6,
+      "minecraft_plane": 3,
+      "observability_plane": 3,
+      "research": 3,
+      "scripts": 2,
+      "shared_interfaces": 3,
+      "tests": 4
+    },
+    "boundary_violations": []
+  },
+  "nodes": [
+    {
+      "id": "agentic_plane.__init__",
+      "path": "agentic_plane/__init__.py",
+      "plane": "agentic_plane",
+      "classes": [],
+      "functions": [],
+      "loc": 15
+    },
+    {
+      "id": "agentic_plane.canary_gate",
+      "path": "agentic_plane/canary_gate.py",
+      "plane": "agentic_plane",
+      "classes": [
+        "CanaryVerificationGate"
+      ],
+      "functions": [],
+      "loc": 53
+    },
+    {
+      "id": "agentic_plane.dpo_logger",
+      "path": "agentic_plane/dpo_logger.py",
+      "plane": "agentic_plane",
+      "classes": [
+        "DPOPreferenceLogger"
+      ],
+      "functions": [],
+      "loc": 38
+    },
+    {
+      "id": "agentic_plane.parry_engine",
+      "path": "agentic_plane/parry_engine.py",
+      "plane": "agentic_plane",
+      "classes": [
+        "AllayOpsParryEngine"
+      ],
+      "functions": [],
+      "loc": 63
+    },
+    {
+      "id": "agentic_plane.policy_validator",
+      "path": "agentic_plane/policy_validator.py",
+      "plane": "agentic_plane",
+      "classes": [
+        "PolicyValidator"
+      ],
+      "functions": [
+        "_strip_comments",
+        "_extract_all_strings"
+      ],
+      "loc": 112
+    },
+    {
+      "id": "agentic_plane.tot_planner",
+      "path": "agentic_plane/tot_planner.py",
+      "plane": "agentic_plane",
+      "classes": [
+        "TreeOfThoughtsPlanner"
+      ],
+      "functions": [],
+      "loc": 62
+    },
+    {
+      "id": "minecraft_plane.__init__",
+      "path": "minecraft_plane/__init__.py",
+      "plane": "minecraft_plane",
+      "classes": [],
+      "functions": [],
+      "loc": 11
+    },
+    {
+      "id": "minecraft_plane.rcon_adapter",
+      "path": "minecraft_plane/rcon_adapter.py",
+      "plane": "minecraft_plane",
+      "classes": [
+        "CommandExecutionResult",
+        "SafeRconAdapter"
+      ],
+      "functions": [],
+      "loc": 72
+    },
+    {
+      "id": "minecraft_plane.savepoint_manager",
+      "path": "minecraft_plane/savepoint_manager.py",
+      "plane": "minecraft_plane",
+      "classes": [
+        "SavepointRecord",
+        "WorldSavepointManager"
+      ],
+      "functions": [],
+      "loc": 75
+    },
+    {
+      "id": "observability_plane.__init__",
+      "path": "observability_plane/__init__.py",
+      "plane": "observability_plane",
+      "classes": [],
+      "functions": [],
+      "loc": 15
+    },
+    {
+      "id": "observability_plane.adwin_detector",
+      "path": "observability_plane/adwin_detector.py",
+      "plane": "observability_plane",
+      "classes": [
+        "ADWINDriftResult",
+        "ADWINDetector",
+        "MinecraftDriftClassifier"
+      ],
+      "functions": [],
+      "loc": 131
+    },
+    {
+      "id": "observability_plane.drain_parser",
+      "path": "observability_plane/drain_parser.py",
+      "plane": "observability_plane",
+      "classes": [
+        "LogTemplate",
+        "DrainLogParser"
+      ],
+      "functions": [],
+      "loc": 79
+    },
+    {
+      "id": "research.__init__",
+      "path": "research/__init__.py",
+      "plane": "research",
+      "classes": [],
+      "functions": [],
+      "loc": 5
+    },
+    {
+      "id": "research.chaos_scenarios",
+      "path": "research/chaos_scenarios.py",
+      "plane": "research",
+      "classes": [
+        "ChaosScenario"
+      ],
+      "functions": [],
+      "loc": 73
+    },
+    {
+      "id": "research.run_benchmark",
+      "path": "research/run_benchmark.py",
+      "plane": "research",
+      "classes": [],
+      "functions": [
+        "run_canonical_suite",
+        "main"
+      ],
+      "loc": 114
+    },
+    {
+      "id": "scripts.generate_codegraph",
+      "path": "scripts/generate_codegraph.py",
+      "plane": "scripts",
+      "classes": [],
+      "functions": [
+        "_module_name",
+        "_plane_of",
+        "_analyze_python_file",
+        "_detect_boundary_violations",
+        "build_codegraph",
+        "main"
+      ],
+      "loc": 153
+    },
+    {
+      "id": "scripts.generate_repo_map",
+      "path": "scripts/generate_repo_map.py",
+      "plane": "scripts",
+      "classes": [],
+      "functions": [
+        "_tracked_files",
+        "_extract_python_symbols",
+        "build_repo_map",
+        "main"
+      ],
+      "loc": 90
+    },
+    {
+      "id": "shared_interfaces.__init__",
+      "path": "shared_interfaces/__init__.py",
+      "plane": "shared_interfaces",
+      "classes": [],
+      "functions": [],
+      "loc": 26
+    },
+    {
+      "id": "shared_interfaces.control_bus",
+      "path": "shared_interfaces/control_bus.py",
+      "plane": "shared_interfaces",
+      "classes": [
+        "ControlEvent",
+        "EventDrivenControlBus"
+      ],
+      "functions": [],
+      "loc": 54
+    },
+    {
+      "id": "shared_interfaces.schemas",
+      "path": "shared_interfaces/schemas.py",
+      "plane": "shared_interfaces",
+      "classes": [
+        "TickTelemetry",
+        "IncidentContext",
+        "ActionProposal",
+        "SafetyVerdict",
+        "ParryResult",
+        "CanaryResult",
+        "ThoughtHypothesis",
+        "DPOPreferencePair"
+      ],
+      "functions": [
+        "utc_now_iso"
+      ],
+      "loc": 104
+    },
+    {
+      "id": "tests.__init__",
+      "path": "tests/__init__.py",
+      "plane": "tests",
+      "classes": [],
+      "functions": [],
+      "loc": 1
+    },
+    {
+      "id": "tests.test_adwin_and_drain",
+      "path": "tests/test_adwin_and_drain.py",
+      "plane": "tests",
+      "classes": [
+        "TestADWINAndDrain"
+      ],
+      "functions": [],
+      "loc": 39
+    },
+    {
+      "id": "tests.test_canary_and_chaos",
+      "path": "tests/test_canary_and_chaos.py",
+      "plane": "tests",
+      "classes": [
+        "TestCanaryAndChaos"
+      ],
+      "functions": [],
+      "loc": 46
+    },
+    {
+      "id": "tests.test_policy_and_parry",
+      "path": "tests/test_policy_and_parry.py",
+      "plane": "tests",
+      "classes": [
+        "TestPolicyAndParry"
+      ],
+      "functions": [],
+      "loc": 44
+    }
+  ],
+  "edges": [
+    {
+      "source": "agentic_plane.__init__",
+      "target": "agentic_plane.canary_gate",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.__init__",
+      "target": "agentic_plane.dpo_logger",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.__init__",
+      "target": "agentic_plane.parry_engine",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.__init__",
+      "target": "agentic_plane.policy_validator",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.__init__",
+      "target": "agentic_plane.tot_planner",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.canary_gate",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.dpo_logger",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.parry_engine",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.policy_validator",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "agentic_plane.tot_planner",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "minecraft_plane.__init__",
+      "target": "minecraft_plane.rcon_adapter",
+      "type": "imports"
+    },
+    {
+      "source": "minecraft_plane.__init__",
+      "target": "minecraft_plane.savepoint_manager",
+      "type": "imports"
+    },
+    {
+      "source": "minecraft_plane.rcon_adapter",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "minecraft_plane.savepoint_manager",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "observability_plane.__init__",
+      "target": "observability_plane.adwin_detector",
+      "type": "imports"
+    },
+    {
+      "source": "observability_plane.__init__",
+      "target": "observability_plane.drain_parser",
+      "type": "imports"
+    },
+    {
+      "source": "research.__init__",
+      "target": "research.chaos_scenarios",
+      "type": "imports"
+    },
+    {
+      "source": "research.chaos_scenarios",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "agentic_plane.canary_gate",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "agentic_plane.parry_engine",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "agentic_plane.policy_validator",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "agentic_plane.tot_planner",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "minecraft_plane.rcon_adapter",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "observability_plane.adwin_detector",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "observability_plane.drain_parser",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "research.chaos_scenarios",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "shared_interfaces.control_bus",
+      "type": "imports"
+    },
+    {
+      "source": "research.run_benchmark",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "shared_interfaces.__init__",
+      "target": "shared_interfaces.control_bus",
+      "type": "imports"
+    },
+    {
+      "source": "shared_interfaces.__init__",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "shared_interfaces.control_bus",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_adwin_and_drain",
+      "target": "observability_plane.adwin_detector",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_adwin_and_drain",
+      "target": "observability_plane.drain_parser",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_canary_and_chaos",
+      "target": "agentic_plane.canary_gate",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_canary_and_chaos",
+      "target": "minecraft_plane.savepoint_manager",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_canary_and_chaos",
+      "target": "research.run_benchmark",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_policy_and_parry",
+      "target": "agentic_plane.parry_engine",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_policy_and_parry",
+      "target": "agentic_plane.policy_validator",
+      "type": "imports"
+    },
+    {
+      "source": "tests.test_policy_and_parry",
+      "target": "shared_interfaces.schemas",
+      "type": "imports"
+    }
+  ]
+}

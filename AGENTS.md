@@ -16,8 +16,9 @@
 - **NEVER** invent or fake server telemetry, TPS/MSPT metrics, or test results.
 
 ## 3. Centralized Commands & Workflow
-- **Repo Map (Fast Context):** Read `docs/architecture/repo_map.json` before scanning the whole repository.
-- **Regenerate Repo Map:** `python scripts/generate_repo_map.py` (also runs automatically in `.githooks/pre-commit`).
+- **AST CodeGraph & Repo Map (Fast Context):** Read `docs/architecture/codegraph.json` and `docs/architecture/repo_map.json` before scanning the whole repository.
+- **Regenerate Maps:** `python scripts/generate_codegraph.py` & `python scripts/generate_repo_map.py` (also run automatically in `.githooks/pre-commit`).
+- **Workspace Skills:** Check `.agents/skills/` (`codegraph-navigator`, `mc-incident-triage`, `safe-research-experiment`, `config-and-release-hygiene`).
 - **Start Minecraft Server:** `.\start.bat` (uses JDK 25, ZGC, 6G–8G heap).
 - **Validate Repo Hygiene:** Check `git status` and ensure no forbidden runtime/secret files are staged.
 

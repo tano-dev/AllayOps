@@ -26,6 +26,9 @@ typecheck:
 repo-map:
 	$(PYTHON) scripts/generate_repo_map.py
 
+codegraph:
+	$(PYTHON) scripts/generate_codegraph.py
+
 benchmark:
 	$(PYTHON) -m research.run_benchmark
 
