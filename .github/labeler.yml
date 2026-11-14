@@ -1,0 +1,20 @@
+# Auto-label Pull Requests based on modified paths
+docs:
+  - changed-files:
+      - any-glob-to-any-file: ['docs/**', '*.md']
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ['.github/**', '.githooks/**']
+
+agentic:
+  - changed-files:
+      - any-glob-to-any-file: ['AGENTS.md', '.agents/**']
+
+server-config:
+  - changed-files:
+      - any-glob-to-any-file: ['server.properties.example', 'start.bat', '.env.example', 'scripts/**']
+
+research:
+  - changed-files:
+      - any-glob-to-any-file: ['research/**', 'experiments/**', 'benchmarks/**']

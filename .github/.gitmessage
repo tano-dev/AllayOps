@@ -1,0 +1,31 @@
+# 🌍 ENGLISH (Delete lines starting with # before saving)
+# <type>(<scope>): <subject>
+# Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+# Scopes: server, mods, agentic, research, infra, ci, docs, scripts, repo
+# Example: feat(research): add agentic tick-telemetry collector
+# Note: Version numbers (e.g., v1.0.0) belong in Git Tags, NOT in commit messages!
+
+<type>(<scope>): <subject>
+
+## 📝 CONTEXT & RATIONALE (Why?)
+# Explain why this change is necessary and what problem or hypothesis it addresses.
+- 
+
+## 🛠️ TECHNICAL CHANGES (What?)
+# List the concrete technical changes made in this commit.
+- **[Component]**: 
+
+## ✅ VERIFICATION
+# How was this tested/verified? (e.g., CI pass, local server boot, unit tests)
+- 
+
+## 🔗 RELATED ISSUES
+# e.g., Relates to #12, Fixes #34
+Relates to:
+
+# ==============================================================================
+# 🇻🇳 TIẾNG VIỆT (Xóa các dòng bắt đầu bằng # trước khi lưu)
+# <loại>(<phạm vi>): <tiêu đề ngắn gọn>
+# Loại: feat, fix, docs, refactor, perf, test, build, ci, chore, revert
+# Phạm vi: server, mods, agentic, research, infra, ci, docs, scripts, repo
+# Ví dụ: feat(agentic): tích hợp bộ thu thập telemetry cho Fabric server

@@ -1,0 +1,43 @@
+name: Security & Secret Scan
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    - cron: "0 2 * * 1" # Weekly Monday 02:00 UTC
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  secret-scan:
+    name: Secret Hygiene Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan for leaked secrets & tokens
+        run: |
+          set -e
+          echo "Scanning tracked files for common secret patterns..."
+          if git grep -nE "(AIza[0-9A-Za-z_-]{35}|sk-[0-9A-Za-z]{20,}|ghp_[0-9A-Za-z]{36}|AKIA[0-9A-Z]{16}|management-server-secret=[^C])" -- ':!.github/workflows/security.yml'; then
+            echo "::error::Potential secret or API key detected in tracked files!"
+            exit 1
+          fi
+          echo "No hardcoded secrets detected."
+
+  dependency-review:
+    name: Dependency Review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4

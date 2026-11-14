@@ -1,0 +1,50 @@
+#!/usr/bin/env sh
+# ==============================================================================
+# AllayOps Enterprise Pre-Commit Hook
+# Enable via: git config core.hooksPath .githooks
+# ==============================================================================
+
+set -e
+
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -z "$STAGED_FILES" ]; then
+  exit 0
+fi
+
+# 1. Block forbidden runtime/secret files
+FORBIDDEN_REGEX='^(server\.properties|\.env(\..*)?|ops\.json|usercache\.json|eula\.txt|world/.*|logs/.*|crash-reports/.*)$'
+for file in $STAGED_FILES; do
+  case "$file" in
+    .env.example|server.properties.example)
+      continue
+      ;;
+  esac
+  if echo "$file" | grep -Eq "$FORBIDDEN_REGEX"; then
+    echo "[PRE-COMMIT BLOCKED] Forbidden runtime or secret file staged: $file"
+    echo "Use server.properties.example or .env.example instead."
+    exit 1
+  fi
+  case "$file" in
+    *.jar|*.mca|*.mcr|*.key|*.pem)
+      echo "[PRE-COMMIT BLOCKED] Forbidden binary or key file staged: $file"
+      exit 1
+      ;;
+  esac
+done
+
+# 2. Scan staged diff for accidental hardcoded secrets
+if git diff --cached | grep -Eq '(AIza[0-9A-Za-z_-]{35}|sk-[0-9A-Za-z]{20,}|ghp_[0-9A-Za-z]{36}|AKIA[0-9A-Z]{16})'; then
+  echo "[PRE-COMMIT BLOCKED] Potential API key or secret detected in staged diff!"
+  exit 1
+fi
+
+# 3. Auto-sync Repo Map for AI Agent productivity (if Python is available)
+if command -v python >/dev/null 2>&1 && [ -f "scripts/generate_repo_map.py" ]; then
+  python scripts/generate_repo_map.py >/dev/null 2>&1 || true
+  if [ -f "docs/architecture/repo_map.json" ]; then
+    git add docs/architecture/repo_map.json
+  fi
+fi
+
+exit 0

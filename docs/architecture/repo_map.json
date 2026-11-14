@@ -1,0 +1,51 @@
+{
+  "project": "AllayOps",
+  "file_count": 34,
+  "files": [
+    ".agents/rules/AGENT_WORKFLOW_AND_QUALITY.md",
+    ".agents/rules/PROJECT_CONTEXT.md",
+    ".editorconfig",
+    ".env.example",
+    ".gitattributes",
+    ".githooks/pre-commit",
+    ".github/.gitmessage",
+    ".github/CODEOWNERS",
+    ".github/ISSUE_TEMPLATE/bug_report.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.yml",
+    ".github/ISSUE_TEMPLATE/research_experiment.yml",
+    ".github/dependabot.yml",
+    ".github/labeler.yml",
+    ".github/pull_request_template.md",
+    ".github/workflows/ci.yml",
+    ".github/workflows/commitlint.yml",
+    ".github/workflows/pr-labeler.yml",
+    ".github/workflows/security.yml",
+    ".gitignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "docs/architecture/ADR-001-repo-structure.md",
+    "docs/architecture/repo_map.json",
+    "docs/guides/GITHUB_ENTERPRISE_SETUP.md",
+    "docs/guides/ONBOARDING.md",
+    "scripts/generate_repo_map.py",
+    "server.properties.example",
+    "start.bat"
+  ],
+  "python_symbols": {
+    "scripts/generate_repo_map.py": {
+      "classes": [],
+      "functions": [
+        "_tracked_files",
+        "_extract_python_symbols",
+        "build_repo_map",
+        "main"
+      ]
+    }
+  }
+}

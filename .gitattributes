@@ -1,0 +1,35 @@
+# ==============================================================================
+# AllayOps .gitattributes — Cross-Platform Line Ending & Binary Normalization
+# ==============================================================================
+
+# Auto-detect text files and normalize to LF in repository
+* text=auto eol=lf
+
+# Windows batch & PowerShell scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Unix shell scripts & Git hooks
+*.sh text eol=lf
+.githooks/* text eol=lf
+
+# Config, Code & Docs
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.java text eol=lf
+*.toml text eol=lf
+*.properties text eol=lf
+
+# Binary assets
+*.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.pdf binary
+*.nbt binary
+*.mca binary

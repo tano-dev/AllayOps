@@ -1,0 +1,102 @@
+# ==============================================================================
+# AllayOps Enterprise .gitignore
+# Separates version-controlled research/IaC/config from Minecraft runtime state
+# ==============================================================================
+
+# --- Minecraft Server Runtime & World Data (NEVER COMMIT) ---
+world/
+world_nether/
+world_the_end/
+logs/
+crash-reports/
+.fabric/
+libraries/
+versions/
+cache/
+*.jar
+*.mca
+*.mcr
+*.dat
+*.dat_old
+*.nbt
+*.lock
+
+# --- Minecraft Server Secrets & Runtime State ---
+server.properties
+ops.json
+usercache.json
+banned-ips.json
+banned-players.json
+whitelist.json
+eula.txt
+fabricloader.log
+
+# --- Secrets & Environment Variables (NEVER COMMIT) ---
+.env
+.env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+*.p12
+*.jks
+credentials.json
+*.key_pool_state.json
+.key_pool_state.json
+
+# --- AI Agent Scratchpads & Ephemeral Teamwork ---
+.agents/teamwork/
+scratch/
+archived_code/
+archived_reports/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Java / Gradle / Maven (for future Fabric Mods / Plugins) ---
+.gradle/
+build/
+target/
+out/
+*.class
+hs_err_pid*
+
+# --- Node / Frontend (for future Control Plane / Dashboard) ---
+node_modules/
+.next/
+dist/
+npm-debug.log*
+yarn-debug.log*
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Temp & Local Data ---
+tmp/
+temp/
+*.tmp
+*.bak
+*.db
+*.sqlite
+*.sqlite3

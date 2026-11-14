@@ -1,0 +1,28 @@
+name: "🔬 Research Experiment"
+description: Propose or track a research hypothesis & benchmark on the Minecraft server
+title: "[RESEARCH] "
+labels: ["research"]
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Research Hypothesis
+      description: State the falsifiable hypothesis you are testing in AllayOps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology & Metrics
+      description: How will you measure success? (e.g., TPS, MSPT, latency, recovery rate)
+    validations:
+      required: true
+
+  - type: textarea
+    id: blast_radius
+    attributes:
+      label: Safety & Rollback Plan
+      description: How do we ensure world/server integrity if the experiment fails?
+    validations:
+      required: true
