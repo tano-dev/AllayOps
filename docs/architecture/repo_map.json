@@ -1,6 +1,6 @@
 {
   "project": "AllayOps",
-  "file_count": 72,
+  "file_count": 71,
   "files": [
     ".agents/rules/AGENT_WORKFLOW_AND_QUALITY.md",
     ".agents/rules/CODEGRAPH_KNOWLEDGE.md",
@@ -51,7 +51,6 @@
     "minecraft_plane/__init__.py",
     "minecraft_plane/rcon_adapter.py",
     "minecraft_plane/savepoint_manager.py",
-    "mods_src/README.md",
     "observability_plane/__init__.py",
     "observability_plane/adwin_detector.py",
     "observability_plane/drain_parser.py",
