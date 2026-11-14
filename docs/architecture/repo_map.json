@@ -1,6 +1,6 @@
 {
   "project": "AllayOps",
-  "file_count": 34,
+  "file_count": 61,
   "files": [
     ".agents/rules/AGENT_WORKFLOW_AND_QUALITY.md",
     ".agents/rules/PROJECT_CONTEXT.md",
@@ -27,17 +27,135 @@
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
+    "Makefile",
     "README.md",
     "SECURITY.md",
+    "agentic_plane/__init__.py",
+    "agentic_plane/canary_gate.py",
+    "agentic_plane/dpo_logger.py",
+    "agentic_plane/parry_engine.py",
+    "agentic_plane/policy_validator.py",
+    "agentic_plane/tot_planner.py",
     "docs/architecture/ADR-001-repo-structure.md",
     "docs/architecture/repo_map.json",
     "docs/guides/GITHUB_ENTERPRISE_SETUP.md",
     "docs/guides/ONBOARDING.md",
+    "minecraft_plane/__init__.py",
+    "minecraft_plane/rcon_adapter.py",
+    "minecraft_plane/savepoint_manager.py",
+    "mods_src/README.md",
+    "observability_plane/__init__.py",
+    "observability_plane/adwin_detector.py",
+    "observability_plane/drain_parser.py",
+    "pyproject.toml",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "research/__init__.py",
+    "research/chaos_scenarios.py",
+    "research/run_benchmark.py",
     "scripts/generate_repo_map.py",
     "server.properties.example",
-    "start.bat"
+    "shared_interfaces/__init__.py",
+    "shared_interfaces/control_bus.py",
+    "shared_interfaces/schemas.py",
+    "start.bat",
+    "tests/__init__.py",
+    "tests/test_adwin_and_drain.py",
+    "tests/test_canary_and_chaos.py",
+    "tests/test_policy_and_parry.py"
   ],
   "python_symbols": {
+    "agentic_plane/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "agentic_plane/canary_gate.py": {
+      "classes": [
+        "CanaryVerificationGate"
+      ],
+      "functions": []
+    },
+    "agentic_plane/dpo_logger.py": {
+      "classes": [
+        "DPOPreferenceLogger"
+      ],
+      "functions": []
+    },
+    "agentic_plane/parry_engine.py": {
+      "classes": [
+        "AllayOpsParryEngine"
+      ],
+      "functions": []
+    },
+    "agentic_plane/policy_validator.py": {
+      "classes": [
+        "PolicyValidator"
+      ],
+      "functions": [
+        "_strip_comments",
+        "_extract_all_strings"
+      ]
+    },
+    "agentic_plane/tot_planner.py": {
+      "classes": [
+        "TreeOfThoughtsPlanner"
+      ],
+      "functions": []
+    },
+    "minecraft_plane/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "minecraft_plane/rcon_adapter.py": {
+      "classes": [
+        "CommandExecutionResult",
+        "SafeRconAdapter"
+      ],
+      "functions": []
+    },
+    "minecraft_plane/savepoint_manager.py": {
+      "classes": [
+        "SavepointRecord",
+        "WorldSavepointManager"
+      ],
+      "functions": []
+    },
+    "observability_plane/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "observability_plane/adwin_detector.py": {
+      "classes": [
+        "ADWINDriftResult",
+        "ADWINDetector",
+        "MinecraftDriftClassifier"
+      ],
+      "functions": []
+    },
+    "observability_plane/drain_parser.py": {
+      "classes": [
+        "LogTemplate",
+        "DrainLogParser"
+      ],
+      "functions": []
+    },
+    "research/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "research/chaos_scenarios.py": {
+      "classes": [
+        "ChaosScenario"
+      ],
+      "functions": []
+    },
+    "research/run_benchmark.py": {
+      "classes": [],
+      "functions": [
+        "run_canonical_suite",
+        "main"
+      ]
+    },
     "scripts/generate_repo_map.py": {
       "classes": [],
       "functions": [
@@ -46,6 +164,54 @@
         "build_repo_map",
         "main"
       ]
+    },
+    "shared_interfaces/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "shared_interfaces/control_bus.py": {
+      "classes": [
+        "ControlEvent",
+        "EventDrivenControlBus"
+      ],
+      "functions": []
+    },
+    "shared_interfaces/schemas.py": {
+      "classes": [
+        "TickTelemetry",
+        "IncidentContext",
+        "ActionProposal",
+        "SafetyVerdict",
+        "ParryResult",
+        "CanaryResult",
+        "ThoughtHypothesis",
+        "DPOPreferencePair"
+      ],
+      "functions": [
+        "utc_now_iso"
+      ]
+    },
+    "tests/__init__.py": {
+      "classes": [],
+      "functions": []
+    },
+    "tests/test_adwin_and_drain.py": {
+      "classes": [
+        "TestADWINAndDrain"
+      ],
+      "functions": []
+    },
+    "tests/test_canary_and_chaos.py": {
+      "classes": [
+        "TestCanaryAndChaos"
+      ],
+      "functions": []
+    },
+    "tests/test_policy_and_parry.py": {
+      "classes": [
+        "TestPolicyAndParry"
+      ],
+      "functions": []
     }
   }
 }

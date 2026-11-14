@@ -72,15 +72,14 @@ jobs:
           sys.exit(1 if errors else 0)
           "
 
-      - name: Run Python lint & tests (when Python modules exist)
+      - name: Run Python lint, typecheck & tests
         run: |
-          if [ -f "pyproject.toml" ] || [ -f "requirements.txt" ] || [ -d "tests" ]; then
-            pip install --no-cache-dir ruff mypy pytest
+          if [ -f "pyproject.toml" ] || [ -f "requirements-dev.txt" ] || [ -d "tests" ]; then
+            pip install --no-cache-dir -r requirements-dev.txt
             ruff format --check .
             ruff check .
-            if [ -d "tests" ]; then
-              pytest tests/
-            fi
+            mypy shared_interfaces minecraft_plane observability_plane agentic_plane research
+            pytest tests/ -v
           else
             echo "No Python modules/tests yet — skipping Python lint/test stage."
           fi

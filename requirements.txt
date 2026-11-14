@@ -1,0 +1,6 @@
+# Core runtime dependencies (keep minimal; core skeleton uses Python stdlib)
+# Uncomment as you integrate live adapters:
+# pydantic>=2.7.0
+# mcrcon>=0.7.0
+# langgraph>=0.2.0
+# qdrant-client>=1.9.0

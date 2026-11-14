@@ -1,0 +1,5 @@
+# Development, linting, type-checking, and CI dependencies
+pytest>=8.0.0
+ruff>=0.6.0
+mypy>=1.11.0
+pyyaml>=6.0.1
