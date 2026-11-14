@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "allayops"
 version = "0.1.0"
-description = "Enterprise-grade Minecraft Fabric Server & Safe Agentic Self-Healing Research Platform"
+description = "AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }

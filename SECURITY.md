@@ -1,5 +1,7 @@
 # Security Policy
 
+> **AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers**
+
 ## Supported Versions
 
 Currently, the `main` branch of **AllayOps** is actively supported with security updates.

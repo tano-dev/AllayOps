@@ -1,6 +1,6 @@
-# AllayOps
+# AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers
 
-> **Enterprise-Grade Minecraft Fabric Server & Agentic Research Platform**
+> **Enterprise-Grade Minecraft Fabric Server & Safe Agentic Research Platform**
 
 AllayOps combines a reproducible **Fabric Minecraft Server (MC 26.3 / Loader 0.20.1)** with an enterprise software engineering, CI/CD, and **AI Agentic Productivity** foundation for applying and benchmarking research techniques directly on a live server environment.
 

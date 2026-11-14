@@ -1,7 +1,8 @@
 # ADR-001: Separation of Runtime Minecraft State from Version-Controlled Repository
 
-- **Status:** Accepted
-- **Date:** 2026-11-14
+> **Project:** AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers  
+> **Status:** Accepted  
+> **Date:** 2026-11-14
 
 ## Context
 A live Fabric Minecraft server generates large binary files (`*.jar`, `libraries/`, `versions/`, `world/*.mca`), rotating logs (`logs/`, `crash-reports/`), and runtime secrets (`server.properties` containing `management-server-secret` and `rcon.password`). Committing these directly to Git bloats repository history, causes merge conflicts, and leaks credentials.

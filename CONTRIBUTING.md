@@ -1,5 +1,7 @@
 # Contributing to AllayOps
 
+> **AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers**
+
 We follow enterprise engineering standards to keep **AllayOps** reproducible, secure, and friendly to both human contributors and AI coding agents.
 
 ---

@@ -1,5 +1,7 @@
 # GitHub Enterprise Setup Guide (A to Z)
 
+> **AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers**
+
 This guide walks through connecting **AllayOps** to GitHub and enabling enterprise-grade repository governance, branch protection, and security controls.
 
 ---

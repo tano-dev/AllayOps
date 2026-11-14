@@ -1,6 +1,6 @@
 # AGENTS.md (System Prompt)
 
-> **Context:** This is **AllayOps** — an enterprise-grade Minecraft Fabric Server (MC 26.3 / Loader 0.20.1, JDK 25 with ZGC) integrated with an AI Agentic & Research platform.
+> **Context:** This is **AllayOps** (*Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers*) — an enterprise-grade Minecraft Fabric Server (MC 26.3 / Loader 0.20.1, JDK 25 with ZGC) integrated with a Safe Agentic & Research platform.
 
 ## 1. Coding Principles (Karpathy's Rules)
 - **Think Before Coding:** Explicitly state assumptions before implementing. If multiple approaches exist, expose tradeoffs and ask the user.

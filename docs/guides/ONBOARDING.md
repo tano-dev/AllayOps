@@ -1,5 +1,7 @@
 # Onboarding Guide — AllayOps
 
+> **AllayOps: Autonomous Low-Latency Agentic Ops for Self-Healing Minecraft Servers**
+
 Welcome to **AllayOps**! This guide helps both human engineers and AI coding agents get productive immediately.
 
 ## 1. Local Git Setup
